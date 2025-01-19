@@ -96,13 +96,11 @@ export const useBurger = create((set) => ({
         },
       ],
     })),
-  removeIngredient: (ingredient) =>
-    set((state) => ({
-      total:
-        state.total -
-        (INGREDIENTS[state.ingredients[ingredient.name]]?.price || 0),
-      ingredients: state.ingredients.filter((ing) => ing.id !== ingredient.id),
-    })),
+    removeIngredient: (ingredient) =>
+      set((state) => ({
+        total: state.total - (INGREDIENTS[ingredient.name]?.price || 0),
+        ingredients: state.ingredients.filter((ing) => ing.id !== ingredient.id),
+      })),
   addedToCart: false,
   setAddedToCart: (addedToCart) => set({ addedToCart }),
 }));
