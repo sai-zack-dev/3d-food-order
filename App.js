@@ -1,11 +1,20 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { Canvas } from '@react-three/fiber/native';
+import { StyleSheet,View } from 'react-native';
+import { BottomUi } from './components/BottomUi';
+import { Burger } from './components/Burger';
+import { Suspense } from 'react';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <Canvas camera={{position: [-2, 2.5, 5], fov: 30}}>
+        <color attach="background" args={["#E5F4FF"]} />
+        <Suspense>
+        <Burger />
+        </Suspense>
+      </Canvas>
+
+      <BottomUi />
     </View>
   );
 }
@@ -14,7 +23,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    // alignItems: 'center',
+    // justifyContent: 'center',
   },
 });
