@@ -3,9 +3,9 @@
 A practice project using **React Native**, **Three Fiber**, and **Drei** to create a fun and interactive 3D food ordering experience. This app is a testbed for experimenting with 3D graphics in mobile development.
 
 ## 📸 Demo Preview
-
-![Demo Preview](./assets/3d-food-order.gif)  
-*(Replace with the actual path to your demo image)*
+<div>
+  <img src="./assets/3d-food-order.gif" width="250" height="500" alt="Demo Preview">
+</div> 
 
 ## 🚀 Features
 - 📱 Mobile-first experience with React Native.
