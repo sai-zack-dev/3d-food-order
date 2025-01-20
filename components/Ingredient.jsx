@@ -23,7 +23,6 @@ export const Ingredient = ({ ingredient, showPrice, ...props }) => {
             onClick={(e) => {
               e.stopPropagation();
               removeIngredient(ingredient);
-              console.log("remove")
             }}
             visible={!addedToCart}
           >
