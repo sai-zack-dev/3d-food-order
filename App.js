@@ -10,10 +10,9 @@ export default function App() {
       <Canvas camera={{position: [-2, 2.5, 5], fov: 30}}>
         <color attach="background" args={["#E5F4FF"]} />
         <Suspense>
-        <Burger />
+          <Burger />
         </Suspense>
       </Canvas>
-
       <BottomUi />
     </View>
   );
