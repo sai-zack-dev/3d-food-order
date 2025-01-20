@@ -13,55 +13,55 @@ import Sausage from "../assets/models/Sausage_Slice_Sausage_0.glb";
 import Tomato from "../assets/models/Tomato_Slice_Tomato_0.glb";
 
 export const INGREDIENTS = {
-  bread: {
-    src: Bread,
-    price: 0.5,
-    icon: "🍞",
-  },
   lettuce: {
     src: Lettuce,
     price: 0.5,
     icon: "🥬",
   },
-  mushroom: {
-    src: Mushroom,
-    price: 1,
-    icon: "🍄",
-  },
-  tomato: {
-    src: Tomato,
-    price: 0.5,
-    icon: "🍅",
+  patty: {
+    src: Patty,
+    price: 2,
+    icon: "🥩",
   },
   cheese: {
     src: Cheese,
     price: 1,
     icon: "🧀",
   },
-  chicken: {
-    src: Chicken,
-    price: 2,
-    icon: "🍗",
-  },
-  sausage: {
-    src: Sausage,
+  bacon: {
+    src: Bacon,
     price: 1.5,
-    icon: "🌭",
+    icon: "🥓",
   },
   salami: {
     src: Salami,
     price: 1.5,
     icon: "🍖",
   },
-  bacon: {
-    src: Bacon,
+  sausage: {
+    src: Sausage,
     price: 1.5,
-    icon: "🥓",
+    icon: "🌭",
   },
-  patty: {
-    src: Patty,
+  chicken: {
+    src: Chicken,
     price: 2,
-    icon: "🍔",
+    icon: "🍗",
+  },
+  tomato: {
+    src: Tomato,
+    price: 0.5,
+    icon: "🍅",
+  },
+  mushroom: {
+    src: Mushroom,
+    price: 1,
+    icon: "🍄",
+  },
+  bread: {
+    src: Bread,
+    price: 0.5,
+    icon: "🍞",
   },
 };
 

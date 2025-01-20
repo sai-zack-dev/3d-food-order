@@ -16,6 +16,8 @@ export const BottomUi = () => {
       <View
         style={{
           padding: 20,
+          borderTopRightRadius: 20,
+          borderTopLeftRadius: 20,
         }}
       >
         {addedToCart ? (
@@ -63,7 +65,7 @@ export const BottomUi = () => {
                   fontWeight: "900",
                 }}
               >
-                Burger
+                SANDWICH
               </Text>
               <Text>⭐️⭐️⭐️⭐️⭐️</Text>
             </View>
@@ -73,7 +75,7 @@ export const BottomUi = () => {
                 color: "#666",
               }}
             >
-              Fresh and delicious burgers made with love
+              Fresh and delicious sandwich made with love
             </Text>
             <View
               style={{
@@ -89,7 +91,7 @@ export const BottomUi = () => {
                 textAlign: "center",
               }}
             >
-              Your Creation (S$5.00)
+              Your Creation ($5.00)
             </Text>
             <Text
               style={{
@@ -97,7 +99,7 @@ export const BottomUi = () => {
                 color: "#666",
               }}
             >
-              Compose your burger by adding ingredients
+              Compose your sandwich by adding ingredients
             </Text>
             <ScrollView
               horizontal
@@ -105,25 +107,24 @@ export const BottomUi = () => {
               style={{
                 marginTop: 8,
                 marginBottom: 8,
-                marginInline: -20,
+                marginInline: -10,
               }}
             >
               {Object.keys(INGREDIENTS).map((ingredient) => (
                 <View key={ingredient} style={{ padding: 10 }}>
                   <AwesomeButton
-                    title={
-                      INGREDIENTS[ingredient].icon +
-                      ` ${capitalizeFirstLetter(ingredient)} (+S$${INGREDIENTS[
-                        ingredient
-                      ].price.toFixed(2)})`
-                    }
+                    title={{
+                      icon: INGREDIENTS[ingredient].icon,
+                      name: capitalizeFirstLetter(ingredient),
+                      price: `+$${INGREDIENTS[ingredient].price.toFixed(2)}`,
+                    }}
                     onPress={() => addIngredient(ingredient)}
                   />
                 </View>
               ))}
             </ScrollView>
             <AwesomeButton
-              title={`+ ADD TO CART (S$${total.toFixed(2)})`}
+              title={`+ ADD TO CART ($${total.toFixed(2)})`}
               color="#008027"
               backgroundColor="#E7FFEB"
               borderColor="#00802750"
